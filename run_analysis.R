@@ -113,4 +113,6 @@ melted = melt(final_data_set, id = id_columns, measure.vars = melted_labels)
 tidy2 <- dcast(melted, Subject_ID + Activity_Label 
                ~ variable, mean)
 
-write.csv(tidy2, "./tidy_data_set.csv")
+write.table(tidy2, "./tidy_data_set.txt", row.names = FALSE )
+print('Done.')
+
